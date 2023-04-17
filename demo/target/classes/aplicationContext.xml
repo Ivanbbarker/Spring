@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+                        ">
+    <!--La siguiente linea es el cierre del beans general*/-->
+
+<!--Además del código estandar anterior, ahora debemos añadir los bean que queramos crear, cada uno de ellos tiene que tener su propio identificador y la clase padre que va a generar los objetos. La  clase no puede ser abstracta ni una Interfaz. El bean y el detalle se deben escribir antes del cierre de </beans> como en el siguiente ejemplo-->
+<bean id="miEmpleado" class="com.example.demo.EmpleadoJefe">
+    <constructor-arg ref="miDocumento"></constructor-arg>
+
+    <!--La siguiente linea es el cierre del bean nuevo que hemos creado*/-->
+</bean>
+<bean id="miDocumento" class="com.example.demo.Documento"> </bean>
+
+</beans>
